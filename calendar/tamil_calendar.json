@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": 1,
+  "calendar": "Tamil Solar",
+  "timezone": "Asia/Kolkata",
+  "source": "Rashtriya Panchang - IMD",
+  "monthStarts": [
+    {
+      "tamilMonth": 7,
+      "gregorianDate": "2026-10-18"
+    },
+    {
+      "tamilMonth": 8,
+      "gregorianDate": "2026-11-17"
+    }
+  ]
+}
