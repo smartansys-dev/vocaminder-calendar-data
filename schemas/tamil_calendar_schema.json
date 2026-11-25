@@ -1,0 +1,887 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "dataVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "calendarId": {
+      "const": "tamil_solar_vakya_chennai"
+    },
+    "calendar": {
+      "const": "Tamil Solar"
+    },
+    "timezone": {
+      "const": "Asia/Kolkata"
+    },
+    "panchangamSystem": {
+      "const": "Traditional Tamil Vakya"
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "Chennai"
+        },
+        "state": {
+          "const": "Tamil Nadu"
+        },
+        "country": {
+          "const": "India"
+        },
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      },
+      "required": [
+        "name",
+        "state",
+        "country",
+        "latitude",
+        "longitude"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "\\+05:30$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tamilYear": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "englishName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "startYear": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "endYear": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "englishName",
+        "startYear",
+        "endYear"
+      ],
+      "additionalProperties": false
+    },
+    "nextYearStart": {
+      "type": "string",
+      "format": "date"
+    },
+    "months": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tamilMonth": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "tamilName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "englishName": {
+            "type": "string",
+            "minLength": 1
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "totalDays": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 32
+          },
+          "days": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gregorianDate": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "tamilDate": {
+                  "type": "object",
+                  "properties": {
+                    "day": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 32
+                    },
+                    "monthNumber": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 12
+                    },
+                    "month": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "monthEnglish": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "year": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "yearId": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "day",
+                    "monthNumber",
+                    "month",
+                    "monthEnglish",
+                    "year",
+                    "yearId"
+                  ],
+                  "additionalProperties": false
+                },
+                "dayOfWeek": {
+                  "type": "object",
+                  "properties": {
+                    "tamil": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "english": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "tamil",
+                    "english"
+                  ],
+                  "additionalProperties": false
+                },
+                "panchangam": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "paksha": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "tamil": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "english": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "required": [
+                                "tamil",
+                                "english"
+                              ],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "tithi": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "tamil": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "english": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "endsAt": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "pattern": "\\+05:30$"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "tamil",
+                                  "english",
+                                  "endsAt"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "nakshatra": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "tamil": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "english": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "endsAt": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "pattern": "\\+05:30$"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "tamil",
+                                  "english",
+                                  "endsAt"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "yoga": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "tamil": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "english": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "endsAt": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "pattern": "\\+05:30$"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "tamil",
+                                  "english",
+                                  "endsAt"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "karana": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "tamil": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "english": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "endsAt": {
+                                    "anyOf": [
+                                      {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "pattern": "\\+05:30$"
+                                      },
+                                      {
+                                        "type": "null"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "tamil",
+                                  "english",
+                                  "endsAt"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "paksha",
+                        "tithi",
+                        "nakshatra",
+                        "yoga",
+                        "karana"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "timings": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "sunrise": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "format": "date-time",
+                              "pattern": "\\+05:30$"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "sunset": {
+                          "anyOf": [
+                            {
+                              "type": "string",
+                              "format": "date-time",
+                              "pattern": "\\+05:30$"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "nallaNeram": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "start": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  }
+                                },
+                                "required": [
+                                  "start",
+                                  "end"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "gowriNallaNeram": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "start": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  }
+                                },
+                                "required": [
+                                  "start",
+                                  "end"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "durmuhurtham": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "start": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  }
+                                },
+                                "required": [
+                                  "start",
+                                  "end"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "varjyam": {
+                          "anyOf": [
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "start": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  },
+                                  "end": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "pattern": "\\+05:30$"
+                                  }
+                                },
+                                "required": [
+                                  "start",
+                                  "end"
+                                ],
+                                "additionalProperties": false
+                              }
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "raghuKalam": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "start": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "pattern": "\\+05:30$"
+                                },
+                                "end": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "pattern": "\\+05:30$"
+                                }
+                              },
+                              "required": [
+                                "start",
+                                "end"
+                              ],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "yamagandam": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "start": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "pattern": "\\+05:30$"
+                                },
+                                "end": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "pattern": "\\+05:30$"
+                                }
+                              },
+                              "required": [
+                                "start",
+                                "end"
+                              ],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "kuligai": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "start": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "pattern": "\\+05:30$"
+                                },
+                                "end": {
+                                  "type": "string",
+                                  "format": "date-time",
+                                  "pattern": "\\+05:30$"
+                                }
+                              },
+                              "required": [
+                                "start",
+                                "end"
+                              ],
+                              "additionalProperties": false
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "sunrise",
+                        "sunset",
+                        "nallaNeram",
+                        "gowriNallaNeram",
+                        "durmuhurtham",
+                        "varjyam",
+                        "raghuKalam",
+                        "yamagandam",
+                        "kuligai"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "specialDays": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "tamil": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "english": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "type",
+                          "tamil",
+                          "english"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "vratham": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "tamil": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "english": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "tamil",
+                          "english"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "lunarEvents": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "amavasai": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "pournami": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "ashtami": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "navami": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "ekadashi": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "pradosham": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "sankataharaChaturthi": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "sashti": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "krithigai": {
+                          "anyOf": [
+                            {
+                              "type": "boolean"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "amavasai",
+                        "pournami",
+                        "ashtami",
+                        "navami",
+                        "ekadashi",
+                        "pradosham",
+                        "sankataharaChaturthi",
+                        "sashti",
+                        "krithigai"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "gregorianDate",
+                "tamilDate",
+                "dayOfWeek",
+                "panchangam",
+                "timings",
+                "specialDays",
+                "vratham",
+                "lunarEvents"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 29,
+            "maxItems": 32
+          }
+        },
+        "required": [
+          "tamilMonth",
+          "tamilName",
+          "englishName",
+          "startDate",
+          "endDate",
+          "totalDays",
+          "days"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 12,
+      "maxItems": 12
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "dataVersion",
+    "calendarId",
+    "calendar",
+    "timezone",
+    "panchangamSystem",
+    "location",
+    "source",
+    "generatedAt",
+    "tamilYear",
+    "nextYearStart",
+    "months"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

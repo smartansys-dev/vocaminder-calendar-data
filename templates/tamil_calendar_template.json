@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 2,
+  "dataVersion": 1,
+  "calendarId": "tamil_solar_vakya_chennai",
+  "calendar": "Tamil Solar",
+  "timezone": "Asia/Kolkata",
+  "panchangamSystem": "Traditional Tamil Vakya",
+  "location": {
+    "name": "Chennai",
+    "state": "Tamil Nadu",
+    "country": "India",
+    "latitude": 13.0827,
+    "longitude": 80.2707
+  },
+  "source": null,
+  "generatedAt": null,
+  "tamilYear": {
+    "id": "2026-2027",
+    "name": "பராபவ",
+    "englishName": "Parabhava",
+    "startYear": 2026,
+    "endYear": 2027
+  },
+  "nextYearStart": null,
+  "months": [
+    {
+      "tamilMonth": 1,
+      "tamilName": "சித்திரை",
+      "englishName": "Chithirai",
+      "startDate": null,
+      "endDate": null,
+      "totalDays": null,
+      "days": [
+        {
+          "gregorianDate": null,
+          "tamilDate": {
+            "day": 1,
+            "monthNumber": 1,
+            "month": "சித்திரை",
+            "monthEnglish": "Chithirai",
+            "year": "பராபவ",
+            "yearId": "2026-2027"
+          },
+          "dayOfWeek": null,
+          "panchangam": null,
+          "timings": null,
+          "specialDays": null,
+          "vratham": null,
+          "lunarEvents": null
+        }
+      ]
+    }
+  ]
+}
