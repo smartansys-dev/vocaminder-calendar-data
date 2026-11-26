@@ -1,5 +1,214 @@
 {
   "schemaVersion": 1,
   "calendarId": "tamil_solar_vakya_chennai",
-  "availableYears": []
+  "availableYears": [
+    {
+      "yearId": "2025-2026",
+      "tamilYear": "விசுவாவசு",
+      "startDate": "2025-04-14",
+      "endDate": "2026-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2025_2026.json"
+    },
+    {
+      "yearId": "2026-2027",
+      "tamilYear": "பராபவ",
+      "startDate": "2026-04-14",
+      "endDate": "2027-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2026_2027.json"
+    },
+    {
+      "yearId": "2027-2028",
+      "tamilYear": "பிலவங்க",
+      "startDate": "2027-04-14",
+      "endDate": "2028-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2027_2028.json"
+    },
+    {
+      "yearId": "2028-2029",
+      "tamilYear": "கீலக",
+      "startDate": "2028-04-14",
+      "endDate": "2029-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2028_2029.json"
+    },
+    {
+      "yearId": "2029-2030",
+      "tamilYear": "சௌமிய",
+      "startDate": "2029-04-14",
+      "endDate": "2030-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2029_2030.json"
+    },
+    {
+      "yearId": "2030-2031",
+      "tamilYear": "சாதாரண",
+      "startDate": "2030-04-14",
+      "endDate": "2031-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2030_2031.json"
+    },
+    {
+      "yearId": "2031-2032",
+      "tamilYear": "விரோதிகிருது",
+      "startDate": "2031-04-14",
+      "endDate": "2032-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2031_2032.json"
+    },
+    {
+      "yearId": "2032-2033",
+      "tamilYear": "பரிதாபி",
+      "startDate": "2032-04-14",
+      "endDate": "2033-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2032_2033.json"
+    },
+    {
+      "yearId": "2033-2034",
+      "tamilYear": "பிரமாதீச",
+      "startDate": "2033-04-14",
+      "endDate": "2034-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2033_2034.json"
+    },
+    {
+      "yearId": "2034-2035",
+      "tamilYear": "ஆனந்த",
+      "startDate": "2034-04-14",
+      "endDate": "2035-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2034_2035.json"
+    },
+    {
+      "yearId": "2035-2036",
+      "tamilYear": "ராட்சச",
+      "startDate": "2035-04-14",
+      "endDate": "2036-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2035_2036.json"
+    },
+    {
+      "yearId": "2036-2037",
+      "tamilYear": "நள",
+      "startDate": "2036-04-14",
+      "endDate": "2037-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2036_2037.json"
+    },
+    {
+      "yearId": "2037-2038",
+      "tamilYear": "பிங்கள",
+      "startDate": "2037-04-14",
+      "endDate": "2038-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2037_2038.json"
+    },
+    {
+      "yearId": "2038-2039",
+      "tamilYear": "காளயுக்தி",
+      "startDate": "2038-04-14",
+      "endDate": "2039-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2038_2039.json"
+    },
+    {
+      "yearId": "2039-2040",
+      "tamilYear": "சித்தார்த்தி",
+      "startDate": "2039-04-14",
+      "endDate": "2040-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2039_2040.json"
+    },
+    {
+      "yearId": "2040-2041",
+      "tamilYear": "ரௌத்திரி",
+      "startDate": "2040-04-14",
+      "endDate": "2041-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2040_2041.json"
+    },
+    {
+      "yearId": "2041-2042",
+      "tamilYear": "துன்மதி",
+      "startDate": "2041-04-14",
+      "endDate": "2042-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2041_2042.json"
+    },
+    {
+      "yearId": "2042-2043",
+      "tamilYear": "துந்துபி",
+      "startDate": "2042-04-14",
+      "endDate": "2043-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2042_2043.json"
+    },
+    {
+      "yearId": "2043-2044",
+      "tamilYear": "ருத்ரோத்காரி",
+      "startDate": "2043-04-14",
+      "endDate": "2044-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2043_2044.json"
+    },
+    {
+      "yearId": "2044-2045",
+      "tamilYear": "ரக்தாட்சி",
+      "startDate": "2044-04-14",
+      "endDate": "2045-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2044_2045.json"
+    },
+    {
+      "yearId": "2045-2046",
+      "tamilYear": "குரோதன",
+      "startDate": "2045-04-14",
+      "endDate": "2046-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2045_2046.json"
+    },
+    {
+      "yearId": "2046-2047",
+      "tamilYear": "அட்சய",
+      "startDate": "2046-04-14",
+      "endDate": "2047-04-14",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2046_2047.json"
+    },
+    {
+      "yearId": "2047-2048",
+      "tamilYear": "பிரபவ",
+      "startDate": "2047-04-15",
+      "endDate": "2048-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2047_2048.json"
+    },
+    {
+      "yearId": "2048-2049",
+      "tamilYear": "விபவ",
+      "startDate": "2048-04-14",
+      "endDate": "2049-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2048_2049.json"
+    },
+    {
+      "yearId": "2049-2050",
+      "tamilYear": "சுக்ல",
+      "startDate": "2049-04-14",
+      "endDate": "2050-04-13",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2049_2050.json"
+    },
+    {
+      "yearId": "2050-2051",
+      "tamilYear": "பிரமோதூத",
+      "startDate": "2050-04-14",
+      "endDate": "2051-04-14",
+      "dataVersion": 1,
+      "file": "tamil_calendar_2050_2051.json"
+    }
+  ]
 }
